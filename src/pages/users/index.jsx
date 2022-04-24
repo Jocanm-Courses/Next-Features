@@ -1,19 +1,16 @@
 import React from 'react'
+import { User } from '../../components/User'
 
 const Users = ({ users }) => {
 
     return (
         <pre>
             {
-                users.map(e => (
-                    <div
-                        key={e.id}
-                        style={{padding:"20px"}}
-                    >
-                        <h3>name: {e.name}</h3>
-                        <h4>email: {e.email}</h4>
-                        <hr />
-                    </div>
+                users.map(user => (
+                    <User
+                        key={user.id}
+                        user={user}
+                    />
                 ))
             }
         </pre>

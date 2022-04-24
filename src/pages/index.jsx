@@ -7,20 +7,22 @@ const Index = () => {
     const { push } = useRouter()
 
     const handleGo = () => {
-        push('/users')
+        push('/blogs')
     }
 
     return (
         <div>
             <h1>Next JS Pre-rendering</h1>
-            <Link href="/">
-                <a>Blog</a>
-            </Link>
             <button
-                onClick={handleGo} 
+                onClick={handleGo}
             >
-                Usuarios
+                Blogs
             </button>
+            <Link href="/users">
+                <a>
+                    Usuarios
+                </a>
+            </Link>
         </div>
     )
 }
