@@ -6,7 +6,14 @@ const Users = ({ users }) => {
         <pre>
             {
                 users.map(e => (
-                    <h3 key={e.id}>{e.name}</h3>
+                    <div
+                        key={e.id}
+                        style={{padding:"20px"}}
+                    >
+                        <h3>name: {e.name}</h3>
+                        <h4>email: {e.email}</h4>
+                        <hr />
+                    </div>
                 ))
             }
         </pre>
@@ -18,11 +25,13 @@ export const getStaticProps = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/users')
     const users = await response.json()
 
-    return {
+    const props = {
         props: {
-            users: users
+            users
         }
     }
+
+    return props
 
 }
 
