@@ -18,9 +18,16 @@ const Index = () => {
             >
                 Blogs
             </button>
+            <br />
             <Link href="/users">
                 <a>
                     Usuarios
+                </a>
+            </Link>
+            <br />
+            <Link href="/posts">
+                <a>
+                    Posts
                 </a>
             </Link>
         </div>
