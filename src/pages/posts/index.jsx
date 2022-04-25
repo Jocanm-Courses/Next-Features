@@ -15,7 +15,6 @@ const PostList = ({ posts }) => {
                         <Link href={`posts/${post.id}`} passHref>
                             <h2>{post.title}</h2>
                         </Link>
-                        <p>{post.body}</p>
                     </div>
                 ))
             }
