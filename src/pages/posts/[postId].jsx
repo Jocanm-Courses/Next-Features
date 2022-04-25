@@ -16,8 +16,6 @@ const PostDesc = ({ post }) => {
 
 export const getStaticProps = async ({ params }) => {
 
-
-
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
     const post = await response.json()
 
@@ -36,11 +34,13 @@ export const getStaticPaths = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/posts')
     const posts = await response.json()
 
-    const paths = posts.map(post => ({
-        params: {
-            postId: `${post.id}`
+    const paths = posts.map(post => (
+        {
+            params: {
+                postId: `${post.id}`
+            }
         }
-    }))
+    ))
 
     return {
         paths,
