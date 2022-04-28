@@ -1,5 +1,6 @@
 {
-    "products": [{
+    "products": [
+        {
             "id": 1,
             "title": "Product 1",
             "price": 7000,
@@ -18,7 +19,8 @@
             "description": "Description 3"
         }
     ],
-    "news": [{
+    "news": [
+        {
             "id": 1,
             "title": "News Article 1",
             "description": "Description 1",
@@ -35,6 +37,12 @@
             "title": "News Article 3",
             "description": "Description 3",
             "category": "sports"
+        },
+        {
+            "id": 4,
+            "title": "News Article 4",
+            "description": "Description 4",
+            "category": "Games"
         }
     ],
     "dashboard": {
