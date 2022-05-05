@@ -4,30 +4,12 @@ import { useRouter } from 'next/router'
 
 const Index = () => {
 
-    const { push } = useRouter()
-
-    const handleGo = () => {
-        push('/blogs')
-    }
-
     return (
         <div>
-            <h1>Next JS Pre-rendering</h1>
-            <button
-                onClick={handleGo}
-            >
-                Blogs
-            </button>
-            <br />
-            <Link href="/users">
+            <h1>Next JS Server-side-rendering</h1>
+            <Link href="/news">
                 <a>
-                    Usuarios
-                </a>
-            </Link>
-            <br />
-            <Link href="/posts">
-                <a>
-                    Posts
+                    Noticias
                 </a>
             </Link>
         </div>

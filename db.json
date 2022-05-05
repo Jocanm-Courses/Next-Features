@@ -51,7 +51,8 @@
         "followers": 20,
         "following": 50
     },
-    "events": [{
+    "events": [
+        {
             "id": 1,
             "title": "Event 1",
             "description": "Description 1",
