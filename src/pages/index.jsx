@@ -12,6 +12,12 @@ const Index = () => {
                     Noticias
                 </a>
             </Link>
+            <br />
+            <Link href="/dashboard">
+                <a>
+                    Dashboard
+                </a>
+            </Link>
         </div>
     )
 }
