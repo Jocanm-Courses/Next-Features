@@ -27,6 +27,7 @@ const NewsPage = ({ articles }) => {
 export const getServerSideProps = async () => {
     const res = await fetch('http://localhost:4000/news')
     const data = await res.json()
+    console.log("Generating page for all articles")
 
     return {
         props: {

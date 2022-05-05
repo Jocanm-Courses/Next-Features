@@ -11,6 +11,8 @@ const CategoryName = ({ articles, category }) => {
                     >
                         <h2>{article.title}</h2>
                         <p>{article.description}</p>
+                        <h3>{article.category}</h3>
+                        <hr />
                     </div>
                 ))
             }
@@ -18,11 +20,16 @@ const CategoryName = ({ articles, category }) => {
     )
 }
 
-export const getServerSideProps = async ({ params }) => {
+export const getServerSideProps = async ({ params, req, res, query }) => {
 
     const { category } = params
 
-    const resp = await fetch(`http://localhost:4000/news?category${category}`)
+    res.setHeader('Set-Cookie', ["name=Jose Angarita"])
+
+    console.log(req.headers.cookie)
+    console.log(query)
+
+    const resp = await fetch(`http://localhost:4000/news?category=${category}`)
     const data = await resp.json()
 
     return {

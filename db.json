@@ -22,8 +22,8 @@
     "news": [
         {
             "id": 1,
-            "title": "News Article 1",
-            "description": "Description 1",
+            "title": "News Article 1 updated 3",
+            "description": "New Description 4",
             "category": "sports"
         },
         {
